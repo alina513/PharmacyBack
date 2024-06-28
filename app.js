@@ -6,7 +6,8 @@ dotenv.config();
 
 const authRouter = require("./routes/auth.js");
 const contactsRouter = require("./routes/contactsRouter.js");
-
+const productsRouter = require("./routes/productsRouter.js")
+""
 const app = express();
 
 
@@ -17,6 +18,7 @@ app.use(express.static("public"));
 
 app.use("/api/users", authRouter);
 app.use("/api/contacts", contactsRouter);
+app.use("/api/products", productsRouter)
 
 app.use((_, res) => {
   res.status(404).json({ message: "Route not found" });
