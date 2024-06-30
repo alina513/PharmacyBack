@@ -36,6 +36,10 @@ price: Joi.string().required(),
 number: Joi.string().required()
 })
 
+const updateCartSchema = Joi.object({
+  number: Joi.string().required()
+  })
+
 
 
 const schemas = {createCartSchema,

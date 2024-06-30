@@ -17,7 +17,7 @@ cartsRouter.post(
   ctrl.createCart
 );
 
-contactsRouter.put(
+cartsRouter.put(
   "/:id",
   authenticate,
   isValidId,
